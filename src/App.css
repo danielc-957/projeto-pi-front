@@ -1,0 +1,10 @@
+.app-background {
+  background-image: url('./images/NovoFundo.png');
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

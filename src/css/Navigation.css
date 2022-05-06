@@ -1,13 +1,3 @@
-#general-page {
-  background-image: url(../images/HomeImg.svg);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  color: #fff;
-  background-size: 100%;
-}
-
 .menu-bar {
   display: flex;
   flex-direction: row;

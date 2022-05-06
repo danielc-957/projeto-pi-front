@@ -14,17 +14,17 @@ const Navigation = () => {
           <Nav className="me-auto">
             <div className="inside-navbar-division">
               <div className="links-division">
-                <Link className="nav-link" to="/Array">
+                <Link className="nav-link" to="/deputados/painel-deputados">
                   Deputados
                 </Link>
-                <Link className="nav-link" to="/Objeto">
+                <Link className="nav-link" to="/evento/detalhes">
                   Eventos
                 </Link>
               </div>
               <div className="search-division">
-                <form class="d-flex justify-content-end">
+                <form className="d-flex justify-content-end">
                   <input
-                    class="form-control me-2"
+                    className="form-control me-2"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
