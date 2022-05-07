@@ -1,5 +1,6 @@
 .menu-bar {
   display: flex;
+  position: absolute;
   flex-direction: row;
   margin-top: 5vh;
   justify-content: space-between;
@@ -9,20 +10,31 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  margin-right: 10vh;
+  margin-left: 15rem;
+  margin-right: 10rem;
   padding-left: 3vh;
-  width: 110vh;
+  width: 100 rem;
   border-radius: 20px;
 }
 
-.links-division{
+.drop-division{
   display: flex;
-  width: 20vh;
+  width: 2rem;
+  padding-top: 
+  0.5rem;
   justify-content: space-between;
 }
 .search-division{
+  padding-top: 0.6rem;
+  padding-bottom: 0.1rem;
 }
-
+.search-division a{
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+} 
+.search-division p{
+  padding-top: 0.1rem;
+} 
 .inside-navbar-division{
   display: flex;
   justify-content: space-between;
@@ -55,9 +67,57 @@
   /*font-family: 'Alice', serif;*/
 }
 
+/* efeito menu sobresair a paginda toda*/
+header{
+    position:fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    transition: all ease 1s;
+}
+.bt{
+    margin-right: 15px;
+}
+.nav{
+    font-size: large;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+header.black{
+    background: rgba(57, 56, 62, 0.30);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
 
+/*barra de busca*/
+#divBusca{
+  background-color:rgba(255, 255, 255, 0.1);
+  border:solid 1px;
+  border-color:#727177 ;
+  border-radius:20px;
+  width: 23rem;
+  height: 2.5rem;
+  color:antiquewhite;
+}
 
-
-
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:260px;
+}
 
 

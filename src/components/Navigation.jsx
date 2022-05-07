@@ -1,36 +1,42 @@
-import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import React,{useState,useEffect} from "react";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../css/Navigation.css";
+import {RiSearchEyeLine} from 'react-icons/ri'
 
-const Navigation = () => {
+const Navigation = ({black}) => {
+  
   return (
     <div id="general-page">
+      <header className={black ? 'black' : ''}></header>
       <div className="menu-bar">
+      <Navbar  variant="dark" fixed="top">
         <Link className="nav-cdb" to="/">
           PORTAL CDB
         </Link>
-        <Navbar className="color-nav" variant="dark">
-          <Nav className="me-auto">
+          <Nav className="me-auto color-nav">
             <div className="inside-navbar-division">
-              <div className="links-division">
-                <Link className="nav-link" to="/deputados/painel-deputados">
-                  Deputados
-                </Link>
-                <Link className="nav-link" to="/evento/detalhes">
-                  Eventos
-                </Link>
+              <div className="drop-division">
+              <NavDropdown title="Deputados" menuVariant="dark" >
+              <Link className='btn text-white' to='/deputados/filtro/partidos'>Partidos</Link>
+              <Link className='btn text-white' to='/deputados/filtro/uf'>UF</Link>
+              <Link className='btn text-white' to='/deputados/filtro/orgaos'>Orgãos</Link>
+              <Link className='btn text-white' to='/deputados/filtro/ordemalfabetica'>Ordem Alfabetica</Link>
+              
+              </NavDropdown>
+              <NavDropdown title="Eventos" menuVariant="dark" >
+              <Link className='btn text-white' to='/eventos/filtro/orgaos'>Orgãos</Link>
+              <Link className='btn text-white' to='/eventos/filtro/ordemalfabetica'>Ordem Alfabetica</Link>
+              </NavDropdown>
               </div>
-              <div className="search-division">
-                <form className="d-flex justify-content-end">
-                  <input
-                    className="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button type="submit">Search</button>
-                </form>
+                
+              <div className="search-division d-flex justify-content-end">
+              <input type="text" id="divBusca" placeholder="Buscar..."/>
+              
+              
+              <a><RiSearchEyeLine/></a>
+                  <a><p>Search</p></a>
+             
               </div>
             </div>
           </Nav>
