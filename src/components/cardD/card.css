@@ -1,0 +1,13 @@
+.conte{
+    width: 180px;
+    height: 210px;
+}
+.conte:hover{
+    
+    width: 180px;
+    height: 280px;
+}
+.botao{
+    margin-top: 2rem;
+    flex-direction: column;
+}
