@@ -13,7 +13,7 @@ const CardD = (x) => {
   return (
     <div>
       <Card  className='conte me-auto mr-auto' bg='dark'>
-  <Card.Img variant="top" src={ x.imagem ? x.imagem : 'https://www.prescriptum.com.br/wp-content/uploads/2015/12/placeholder-usuario-500x500.jpg'} />
+  <Card.Img className='altimg' variant="top" src={ x.imagem ? x.imagem : 'https://www.prescriptum.com.br/wp-content/uploads/2015/12/placeholder-usuario-500x500.jpg'} />
   <Card.Body >
   <Card.Text className='text-light'>
       <strong className='text-light'>Nome : </strong>{x.nome}
@@ -21,7 +21,7 @@ const CardD = (x) => {
     <Card.Text className='text-light'>
       <strong className='text-light'>Partido : </strong>{x.siglaPartido}
     </Card.Text>
-     <Link className='btn btn-primary text-white botao' to={'/deputados/detalhe/'+x.id}>Ver mais{x.id}</Link>
+     <Link className='btn btn-primary text-white botao' to={'/deputados/detalhe/'+x.id}>Ver mais</Link>
   </Card.Body>
 </Card>
     </div>

@@ -15,7 +15,7 @@ const CardE = (x) => {
     <Card.Text className='text-light'>
       <strong className='text-light'>Data de Termino : </strong>{x.dataf? x.dataf:'Em andamento'}
     </Card.Text>
-     <Link className='btn btn-primary text-white' to={'/eventos/detalhe/'+x.id}>Ver mais{x.id}</Link>
+     <Link className='btn btn-primary text-white' to={'/eventos/detalhe/'+x.id}>Ver mais</Link>
   </Card.Body>
 </Card>
     </div>

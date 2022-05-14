@@ -4,6 +4,7 @@
 
 .moverow h2 {
     margin: 0px 0px 0px 30px;
+    color: rgba(223, 223, 223, 0.822);
 }
 
 .moverow--listarea {
@@ -18,11 +19,9 @@
 .moverow--item{
     display: inline-block;
     width:200px;
-    border-radius: 200px;
-    cursor: pointer;
-    
+    border-radius: 20px;
+    cursor: pointer;    
 }
-
 
 .moverow--item img{
    width: 40%;
