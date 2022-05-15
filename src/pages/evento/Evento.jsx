@@ -16,9 +16,10 @@ const Evento = () => {
     data();
   },[])
   return (
-    <div className="cont">
-      <h1 className="titulo">Lista de eventos por {params.query}</h1>
-      <Rowdep title='partido' items={eventos}/>
+    <div className="cont2">
+      <h1 className="titulo mb-3">Lista de eventos por {params.query}</h1>
+      <div className="linha mb-5"></div>
+      <Rowdep className="mb-2" title='Partido' items={eventos}/>
     </div>
   );
 };

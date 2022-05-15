@@ -49,7 +49,7 @@ export default ({title, items}) =>{
                         <div key={key} className="moverow--item"> 
                          
                             {item.urlFoto && <CardD id={item.id} imagem={item.urlFoto} nome={item.nome} siglaPartido={item.siglaPartido} />}
-                            {item.descricaoTipo && <CardE id={item.id} data={item.dataHoraInicio} dataf={item.dataHoraFim} nome={item.descricaoTipo} />}
+                            {item.descricaoTipo && <CardE id={item.id} data={item.dataHoraInicio} dataf={item.dataHoraFim} nome={item.descricaoTipo}/>}
                             
                         </div>
                     ))}

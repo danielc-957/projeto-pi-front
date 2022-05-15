@@ -16,7 +16,7 @@ const Deputados = () => {
 
       const pega = await apiDeputados.get('/partidos?ordem=ASC&ordenarPor=sigla&pagina=1&itens=35');
       const data = pega.data.dados
-      
+
       for (let index = 0; index < data.length; index++) {
         const id = data[index].id;
         const pega2 = await apiDeputados.get('/partidos/'+id+'/membros');
@@ -24,7 +24,7 @@ const Deputados = () => {
       }
 
       console.log(data)
-      
+
       setPartidos(data)
 
     }
@@ -40,7 +40,7 @@ const Deputados = () => {
       </div>
     );
   }
-  
+
   else if (params.query === 'ordemalfabetica') {
     return (
       <div className="cont1">
@@ -48,7 +48,7 @@ const Deputados = () => {
       </div>
     );
   } 
-  
+
   else if (params.query === 'uf') {
     return (
       <div className="cont1">
@@ -56,14 +56,14 @@ const Deputados = () => {
       </div>
     );
   } 
-  
+
   else {
     return (
       <div className="cont1">
         <h1 className="titulo mb-3"> Lista de deputados por {params.query}</h1>
         <div className="linha mb-5"></div>
         {partidos && partidos.map ((item,key) => (
-          <Rowdep className="mb-2" title={item.nome} items={item.membros} key={key} />
+          <Rowdep className='md-5' title={item.nome} items={item.membros} key={key} />
         ))}
       </div>
     );
