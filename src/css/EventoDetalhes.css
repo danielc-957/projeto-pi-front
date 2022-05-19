@@ -1,0 +1,44 @@
+
+.titulo {
+  margin-left: 2.1rem;
+}
+
+.cont{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  min-height: 60vh;
+  width: 80%;
+  margin: 8rem 0rem 0rem 8rem ;
+  margin-top: 9rem;
+  border-radius: 2rem;
+}
+
+.align-container{
+  display: flex; 
+  justify-content: center;
+}
+ 
+.inside-card {
+  background-color: #39383E;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 80rem;
+  border-radius: 2rem;
+  margin: 2rem;
+}
+
+h6 {
+  color: #FFF;
+  font-family: 'Alice', serif;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+span {
+  color: #FFF;
+  font-family: 'Alice', serif;
+}
+
