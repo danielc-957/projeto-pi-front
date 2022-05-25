@@ -2,10 +2,15 @@
     font-size: 2rem;
     font-family: 'Alice', serif;
     font-weight: 300;
-   
-    font:#FFFFFF;
+    padding-left: 30px;
+    font:#ffffff;
 }
-.cont{
-    padding-top: 65px;
-    padding-left: 10px;
+.cont1{
+    padding-top: 120px;
+    padding-left: 30px;
+}
+.linha{
+    width: 50%;
+    height: 1px;
+    background-color: #FFFFFF;
 }

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -8,7 +7,7 @@ import Home from "./pages/Home"; //componente home
 import Deputados from "./pages/deputados/Deputados";
 import DeputadosDetalhes from "./pages/deputados/DeputadosDetalhes";
 import Evento from "./pages/evento/Evento";
-import EventoDetalhes from "./pages/evento/EventoDetalhes";
+import EventosDetalhes from "./pages/evento/EventosDetalhes";
 
 function App() {
   const [blackHeader, setblackHeader] = useState(false);
@@ -37,12 +36,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/deputados/filtro/:query" element={<Deputados />} />
-            <Route path="/deputados/detalhes" element={<DeputadosDetalhes />} />
-            <Route path="/eventos/filtro/:query" element={<Evento />} />
             <Route
-              path="/eventos/filtro/detalhes"
-              element={<EventoDetalhes />}
+              path="/deputados/detalhe/:id"
+              element={<DeputadosDetalhes />}
             />
+            <Route path="/eventos/detalhe/:id" element={<EventosDetalhes />} />
           </Routes>
         </div>
       </BrowserRouter>

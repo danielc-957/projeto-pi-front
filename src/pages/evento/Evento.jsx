@@ -2,23 +2,26 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../../css/evento.css";
 import apiDeputados from "../../services/apiDeputados";
-
+import Rowdep from "../../components/rowdep/Rowdep";
 const Evento = () => {
   const params = useParams();
-
-  const [evento, setEvento] = useState({});
-  const [orgaos, setOrgaos] = useState([]);
-
+  let [eventos, setEventos] = useState([]);
   useEffect(() => {
-    apiDeputados.get("/eventos/65087").then((resultado) => {
-      setOrgaos(resultado.data.dados);
-      console.log(resultado.data.dados);
-    });
+    async function data() {
+      const pega = await apiDeputados.get(
+        "/eventos?ordem=ASC&ordenarPor=dataHoraInicio"
+      );
+      const data = pega.data.dados;
+      console.log(data);
+      setEventos(data);
+    }
+    data();
   }, []);
-
   return (
-    <div className="cont">
-      <h1 className="titulo">Lista de eventos por {params.query}</h1>
+    <div className="cont2">
+      <h1 className="titulo mb-3">Lista de eventos por {params.query}</h1>
+      <div className="linha mb-5"></div>
+      <Rowdep className="mb-2" title="Partido" items={eventos} />
     </div>
   );
 };

@@ -1,0 +1,7 @@
+.conte{
+    width: 200px;
+    height: 250px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.219);
+    border-radius: 20px; 
+    margin-top: 20px;
+}
