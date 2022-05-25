@@ -34,6 +34,10 @@ const EventosDetalhes = () => {
     apiDeputados.get("/eventos/" + params.id).then((resultado) => {
       setLocal(resultado.data.dados.localCamara);
     });
+
+    apiDeputados.get("/eventos/" + params.id).then((resultado) => {
+      setOrgaos(resultado.data.dados.orgaos);
+    });
   }, []);
 
   /*
@@ -49,7 +53,6 @@ const EventosDetalhes = () => {
   {evento.orgaos.map((item) => (
     <span key={item.id}>{item.nome} </span>
   ))}
-
   <a href={evento.uri}>{evento.uri} </a>
   */
   return (
@@ -60,8 +63,13 @@ const EventosDetalhes = () => {
           <h6 className="fonte">
             Data de Inicio: <span>{evento.dataHoraInicio}</span>
           </h6>
-          <p className="fonte">Local:{local.nome} </p>
-          <h6 className="fonte">Orgaos: </h6>
+          <h6 className="fonte">Local: {local.nome} </h6>
+          <h6 className="fonte">
+            Orgaos:{" "}
+            {orgaos.map((item) => (
+              <span key={item.id}>{item.nome} </span>
+            ))}{" "}
+          </h6>
           <h6 className="fonte">
             Link: <a href={evento.uri}>{evento.uri} </a>
           </h6>
