@@ -26,7 +26,7 @@ const DeputadosDetalhes = () => {
                 <h1 className="titulo-nome">Nome:</h1>
               </div>
               <div>
-                <Link className="btn botao-despesas" to="/despesas/">Despesas</Link>
+                <Link className="btn botao-despesas" to="/pages/despesas/Graficos/">Despesas</Link>
                 <img src="https://www.camara.leg.br/internet/deputado/bandep/pagina_do_deputado/204416.jpg" alt="..." class="rounded-circle img-dep"></img>
               </div>
               <div>

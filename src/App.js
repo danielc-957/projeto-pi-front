@@ -9,6 +9,7 @@ import Deputados from "./pages/deputados/Deputados";
 import DeputadosDetalhes from "./pages/deputados/DeputadosDetalhes";
 import Evento from "./pages/evento/Evento";
 import EventosDetalhes from "./pages/evento/EventosDetalhes";
+import Graficos from "./pages/despesas/Graficos";
 
 function App() {
   const [blackHeader, setblackHeader]= useState(false);
@@ -40,6 +41,7 @@ function App() {
             <Route path="/deputados/detalhe/:id" element={<DeputadosDetalhes />} />
             <Route path="/eventos/detalhe/:id" element={<EventosDetalhes />} />
             <Route path="/eventos/filtro/:query" element={<Evento />} />
+            <Route path="/pages/despesas/Graficos" element={<Graficos />} />
           </Routes>
         </div>
       </BrowserRouter>
