@@ -1,0 +1,66 @@
+.detalhes-dep{
+    margin-top: 100px;
+}
+
+.fundo-desfocado{
+    backdrop-filter: blur(20px);
+}
+.borda-arrendondada{
+    border-radius: 20px;
+}
+
+.titulo-evento{
+    font-family: 'bhaya Libre';
+    margin-top: 5px;
+}
+
+.titulo-nome{
+    font-family: 'bhaya Libre';
+    font-size: 30px
+}
+
+.botao-despesas{
+    background-color: rgba(67, 56, 202, 1);
+    color: white;
+}
+
+.txt-evento{
+    font-family: 'sans-serif';
+    font-size: 15px;
+    margin-bottom: -10px;
+    margin-top: 20px;
+}
+
+.titulo-info{
+    font-family: 'serif';
+    font-size: 25px;
+    margin-top: 80px;
+}
+
+.titulo-nome-2{
+    font-family: 'Abhaya Libre Medium';
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.img-dep{
+    width: 125px;
+    height: 125px;
+}
+
+.txt-detalhes{
+    font-family: 'serif';
+    font-size: 18px;
+}
+
+.linha-vertical-col{
+    border-left: solid 1px;
+    padding: 0px;
+    flex: 0;
+}
+
+.linha-2{
+    width: 55%;
+    height: 1px;
+    background-color: #FFFFFF;
+}

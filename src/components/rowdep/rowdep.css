@@ -1,0 +1,72 @@
+.moverow{
+    margin-bottom: 30px;
+}
+
+.moverow h2 {
+    margin: 0px 0px 0px 30px;
+    color: rgba(223, 223, 223, 0.822);
+}
+
+.moverow--listarea {
+    overflow-x : hidden;
+    padding-left: 30px;
+}
+
+.moverow--list {
+    transition : all ease 0.3s;
+}
+
+.moverow--item{
+    display: inline-block;
+    width:200px;
+    border-radius: 20px;
+    cursor: pointer;    
+}
+
+.moverow--item img{
+   width: 40%;
+   transform: scale(0.9);
+   transition : all ease 0.2s;
+   border-radius: 200px;
+}
+
+
+.moverow--item img:hover{
+    transform: scale(1);
+ }
+
+ .moverow-left,
+ .moverow-right {
+    position:absolute;   
+    width: 40px;
+    height: 225px;
+    background-color:rgba(0,0,0,0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor:pointer;
+    opacity: 0;
+    transition : all ease 0.2s;
+}
+
+ .moverow-left{
+     left: 0;
+ }
+
+ .moverow-right{
+    right: 0;
+}
+
+.moverow:hover .moverow-left,
+.moverow:hover .moverow-right{
+    opacity: 1;
+}
+
+@media (max-width: 760px){
+    .moverow-left,
+    .moverow-right {
+    opacity: 1;
+    }
+}

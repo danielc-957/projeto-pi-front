@@ -1,0 +1,33 @@
+.chamada-home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  padding-left: 30rem;
+}
+
+.texto-principal {
+  font-size: 5rem;
+  font-family: 'Alice', serif;
+  font-weight: 400;
+  padding-top: 8rem;
+  color: #FFFFFF;
+}
+
+.texto-conteudo {
+  font-family: 'Aleo', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 7rem;
+  color: #E4E4E4;
+}
+
+.texto-conteudo-secundario {
+  font-family: 'Aleo', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font: #E4E4E4;
+  padding-top: .75rem;
+}
