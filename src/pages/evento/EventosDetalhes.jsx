@@ -10,6 +10,7 @@ const EventosDetalhes = () => {
   const [evento, setEvento] = useState({});
   const [local, setLocal] = useState({});
   const [orgaos, setOrgaos] = useState([]);
+  const [newObject, setNewObject] = useState({});
 
   let [deputados, setDeputados] = useState([]);
   useEffect(() => {
@@ -17,10 +18,22 @@ const EventosDetalhes = () => {
       const pega = await apiDeputados.get(
         "/eventos/" + params.id + "/deputados"
       );
-      console.log(pega);
       const data = pega.data.dados;
-      console.log(data);
-      setDeputados(data);
+      // const newData = newDataType(data);
+      // console.log(data);
+      let newData = [];
+      for (let index = 0; index < data.length; index++) {
+        const aux = {
+          nome: data[index].nome,
+          foto: data[index].urlFoto,
+          cardEvento: true,
+        };
+
+        setNewObject(aux);
+        newData[index] = aux;
+      }
+      console.log(newData);
+      setDeputados(newData);
     }
     data();
   }, []);
@@ -40,6 +53,30 @@ const EventosDetalhes = () => {
     });
   }, []);
 
+  /*
+  function newDataType(data) {
+    let newData = [];
+    for (let index = 0; index < data.length; index++) {
+      const aux = {
+        nome: data.nome,
+        urlFoto: data.urlFoto,
+      };
+
+      setNewObject(aux);
+      console.log(newObject);
+      newData[index] = newObject;
+    }
+    return newData;
+    */
+  /*
+    data.map((item, id) => {
+      newObject.photo = item.urlFoto;
+      newObject.nome = item.nome;
+      newData.push(newObject);
+      return newData;
+    });
+  }
+    */
   /*
 
   Exemplos projeto: 
@@ -75,7 +112,9 @@ const EventosDetalhes = () => {
           </h6>
         </div>
       </div>
-      <Rowdep className="mb-2" title="Participantes" items={deputados} />
+      <div className="mb-30">
+        <Rowdep className="mb-2" title="Participantes" items={deputados} />
+      </div>
     </div>
   );
 };
