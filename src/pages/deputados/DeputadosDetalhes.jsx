@@ -30,7 +30,7 @@ const DeputadosDetalhes = () => {
 
     resgatarInformacao(params.id)
 
-  }, [])
+  }, [params.id])
 
   function idade(dataNascimento) {
     let anoDeNascimento = dataNascimento.split("-")[0]
@@ -45,11 +45,16 @@ const DeputadosDetalhes = () => {
         <div className="div-backgound fundo-desfocado borda-arrendondada p-3 mt-5">
           <Row>
             <Col>
-              <div className="px-5 p-3 titulo-evento-txt">
+              <div className="px-5 p-3 titulo-evento">
                 <h1>Eventos</h1>
-                {evento && evento.map ((item,key) => (
-                  <p key={key}>Descrição: {item.descricao}</p>
-                ))}
+                <div>
+                  {evento.map(item => (
+
+                    <><div className=" txt-evento" key={item.id}>Nome: {item.descricao} <br /> Local: {item.localCamara.nome} <br /> Data e Horário: {item.dataHoraInicio}</div></>
+                  
+
+                  ))}
+                </div>
               </div>
             </Col>
             <Col className="d-none d-md-block linha-vertical-col"></Col>
@@ -86,6 +91,7 @@ const DeputadosDetalhes = () => {
               <div className="linha-2 mb-2"></div>
               <div className="titulo-nome-2">Nome: {deputado.nomeCivil}</div>
               <div className="txt-detalhes">Idade: {deputado.idade}</div>
+              <div className="txt-detalhes">Sexo: {deputado.sexo}</div>
               <div className="txt-detalhes">Escolaridade: {deputado.escolaridade}</div>
               <div className="txt-detalhes">Município: {deputado.municipioNascimento}</div>
               <div className="txt-detalhes">E-mail: {deputado.ultimoStatus.email}</div>
