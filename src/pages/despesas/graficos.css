@@ -1,0 +1,49 @@
+#graphic{
+    background: rgba(14, 14, 14, 0.1);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 120px;
+    padding: 45px;
+    text-align: top;
+    border-radius: 15px;
+    height: 640px;
+    font-family: 'Aleo';
+    font-size: small;
+    
+}#info{
+    margin: 5px;
+    height: 20rem;
+    width: 35rem;
+    background-color: #4C4B50;
+    border-radius: 15px;
+    margin-left: 75px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding: 5px;
+}
+#linha{
+    width: 35rem;
+    border-bottom: 1px solid white;
+    margin: 15px 10px 5px 60px;
+}
+.col-sm{
+   margin-left: 74px;
+}
+#text{
+    margin-left: 60px;
+    font-size: medium;
+    margin-top: 30px;
+    
+}
+h1{
+    font-size: x-large;
+}
+#box{
+   
+    height: 500px;
+    width: 50rem;
+    padding: 5px;
+    padding-left: 30px;
+    margin-left: 60px;
+    margin-top: 25px;
+}
