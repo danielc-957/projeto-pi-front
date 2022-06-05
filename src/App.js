@@ -43,7 +43,6 @@ function App() {
             />
             <Route path="/eventos/detalhe/:id" element={<EventosDetalhes />} />
             <Route path="/eventos/filtro/:query" element={<Evento />} />
-            <Route path="/pages/despesas/Graficos" element={<Graficos />} />
           </Routes>
         </div>
       </BrowserRouter>
