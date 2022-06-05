@@ -19,7 +19,9 @@ const DeputadosDetalhes = () => {
       const evento = await apiDeputados.get(uriEvento)
       let deputadoResponse = await apiDeputados.get(uriDeputado)
 
-      deputadoResponse.data.dados.idade = idade(deputadoResponse.data.dados.dataNascimento)
+      if (deputadoResponse) {
+        deputadoResponse.data.dados.idade = idade(deputadoResponse.data.dados.dataNascimento)
+      }
 
       setDeputado(deputadoResponse.data.dados)
       setEvento(evento.data.dados)
@@ -39,6 +41,10 @@ const DeputadosDetalhes = () => {
     return idade
   }
 
+  if (!deputado || !deputado.ultimoStatus) {
+    return (<h1>Carregando...</h1>)
+  }
+
   return (
     <div className="detalhes-dep">
       <Container>
@@ -51,7 +57,6 @@ const DeputadosDetalhes = () => {
                   {evento.map(item => (
 
                     <><div className=" txt-evento" key={item.id}>Nome: {item.descricao} <br /> Local: {item.localCamara.nome} <br /> Data e Horário: {item.dataHoraInicio}</div></>
-                  
 
                   ))}
                 </div>
@@ -64,7 +69,7 @@ const DeputadosDetalhes = () => {
                   <tbody>
                     <tr>
                       <td>
-                        <img src="https://www.camara.leg.br/internet/deputado/bandep/pagina_do_deputado/204416.jpg" alt="..." class="rounded-circle img-dep"></img>
+                        <img src={deputado.ultimoStatus.urlFoto} alt="..." class="rounded-circle img-dep"></img>
                       </td>
                       <td>
                         <tr>

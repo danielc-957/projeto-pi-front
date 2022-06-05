@@ -7,7 +7,7 @@ import Rowdep from "../../components/rowdep/Rowdep";
 const Deputados = () => {
 
   const params = useParams()
-  let [deputados, setDeputados] = useState([])
+  
   let [partidos, setPartidos] = useState([])
 
   useEffect(() => {
