@@ -1,78 +1,66 @@
-.detalhes-dep {
-    padding-top: 120px;
-    font-size: 2rem;
-    font-family: 'Alice', serif;
-    font-weight: 300;
-    padding-left: 30px;
-    padding-top: 120px;
-    font: #ffffff;
+.detalhes-dep{
+    margin-top: 100px;
 }
 
-.div-background{
-    background: rgba(0, 0, 0, 0.755);
-    border-radius: 50px;
+.fundo-desfocado{
+    backdrop-filter: blur(20px);
+}
+.borda-arrendondada{
+    border-radius: 20px;
 }
 
-.titulo-evento {
-    font-family: 'Aleo';
-    font-style: normal;
-    margin-left: 25px;
+.titulo-evento{
+    font-family: 'bhaya Libre';
+    margin-top: 5px;
 }
 
-.titulo-nome {
-    font-family: 'Aleo';
-    font-style: normal;
-    margin-right: 100px
+.titulo-nome{
+    font-family: 'bhaya Libre';
+    font-size: 30px
 }
 
-.botao-despesas {
-    width: 111px;
-    height: 30.25px;
-    left: 609px;
-    top: 2354px;
+.botao-despesas{
     background-color: rgba(67, 56, 202, 1);
     color: white;
 }
 
-.txt-evento {
-    width: 284px;
-    height: 483px;
-    left: 148px;
-    top: 2457px;
-    font-family: 'Abhaya Libre';
-    font-style: normal;
-    font-size: 30px;
-    margin-top: 50px;
-    margin-left: 25px;
-
+.txt-evento{
+    font-family: 'sans-serif';
+    font-size: 15px;
+    margin-bottom: -10px;
+    margin-top: 20px;
 }
 
-.titulo-info {
-    font-family: 'Aleo';
-    font-style: normal;
-    font-size: 24px;
-    margin-top: 40px;
-
+.titulo-info{
+    font-family: 'serif';
+    font-size: 25px;
+    margin-top: 80px;
 }
 
-.titulo-partido {
+.titulo-nome-2{
     font-family: 'Abhaya Libre Medium';
-    font-style: normal;
-    font-size: 35px;
-    margin-top: 30px;
-
+    font-size: 18px;
+    margin-top: 25px;
 }
 
-.img-dep {
+.img-dep{
     width: 125px;
     height: 125px;
-    margin-left: 300px;
-    background: linear-gradient(180deg, rgba(24, 5, 253, 0.3) 11.97%, rgba(255, 255, 255, 0.108) 100%);
 }
 
-.txt-detalhes {
-    font-family: 'Abhaya Libre';
-    font-style: normal;
-    font-size: 23px;
+.txt-detalhes{
+    font-family: 'serif';
+    font-size: 18px;
+}
 
+.linha-vertical-col{
+    border-left: solid 1px;
+    padding: 0px;
+    flex: 0;
+}
+
+.linha-2{
+    width: 55%;
+    height: 1px;
+    background-color: #FFFFFF;
 }
