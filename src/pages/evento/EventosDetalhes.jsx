@@ -112,9 +112,7 @@ const EventosDetalhes = () => {
           </h6>
         </div>
       </div>
-      <div className="mb-30">
-        <Rowdep className="mb-2" title="Participantes" items={deputados} />
-      </div>
+      <Rowdep className="mb-2" title="Participantes" items={deputados} />
     </div>
   );
 };
