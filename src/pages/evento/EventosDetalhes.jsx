@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Rowdep from "../../components/rowdep/Rowdep";
 import "../../css/EventoDetalhes.css";
 import apiDeputados from "../../services/apiDeputados";
+import dayjs from "dayjs";
 
 const EventosDetalhes = () => {
   const params = useParams();
@@ -53,6 +54,7 @@ const EventosDetalhes = () => {
     });
   }, []);
 
+
   /*
   function newDataType(data) {
     let newData = [];
@@ -98,7 +100,10 @@ const EventosDetalhes = () => {
       <div className=" align-container">
         <div className="inside-card">
           <h6 className="fonte">
-            Data de Inicio: <span>{evento.dataHoraInicio}</span>
+            Data de Inicio:{" "}
+            <span>
+              {dayjs(evento.dataHoraInicio).format("DD/MM/YYYY HH:mm:ss")}
+            </span>
           </h6>
           <h6 className="fonte">Local: {local.nome} </h6>
           <h6 className="fonte">
@@ -108,7 +113,7 @@ const EventosDetalhes = () => {
             ))}{" "}
           </h6>
           <h6 className="fonte">
-            Link: <a href={evento.uri}>{evento.uri} </a>
+            Link: <a href={evento.urlRegistro} target="_blank" rel="noreferrer">{evento.urlRegistro} </a>
           </h6>
         </div>
       </div>
