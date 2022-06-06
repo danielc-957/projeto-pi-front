@@ -41,7 +41,7 @@ function App() {
             <Route path="/deputados/detalhe/:id" element={<DeputadosDetalhes />} />
             <Route path="/eventos/detalhe/:id" element={<EventosDetalhes />} />
             <Route path="/eventos/filtro/:query" element={<Evento />} />
-            <Route path="/pages/despesas/Graficos" element={<Graficos />} />
+            <Route path="/deputados/graficos/:id" element={<Graficos />} />
           </Routes>
         </div>
       </BrowserRouter>
