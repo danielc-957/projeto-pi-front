@@ -62,5 +62,10 @@
 .linha-2{
     width: 55%;
     height: 1px;
-    background-color: #FFFFFF;
+    background-color: #ffffff54;
+}
+
+.txt-evento:not(.txt-evento:nth-child(1)) {
+    border-top: 1px solid #ffffff24;
+    padding-top: 13px;
 }
