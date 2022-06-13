@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import "../css/Navigation.css";
+import { Button, Form } from "react-bootstrap";
 import { RiSearchEyeLine } from "react-icons/ri";
+import { useForm } from "react-hook-form";
 
 const Navigation = ({ black }) => {
+  const { register, handleSubmit, getValues } = useForm();
+  const navigate = useNavigate();
+
+  function receiveData() {
+    const values = getValues();
+    navigate("/busca", { state: values.busca });
+  }
+
   return (
     <div id="general-page">
       <header className={black ? "black" : ""}></header>
@@ -59,13 +69,18 @@ const Navigation = ({ black }) => {
               </div>
 
               <div className="search-division d-flex justify-content-end">
-                <input type="text" id="divBusca" placeholder="Buscar..." />
+                <Form.Group
+                  className="mb-3"
+                  controlId="busca"
+                  id="divBusca"
+                  placeholder="Buscar..."
+                >
+                  <Form.Control type="text" {...register("busca")} />
+                </Form.Group>
 
                 <a>
                   <RiSearchEyeLine />
-                </a>
-                <a>
-                  <p>Search</p>
+                  <input type="submit" onClick={handleSubmit(receiveData)} />
                 </a>
               </div>
             </div>

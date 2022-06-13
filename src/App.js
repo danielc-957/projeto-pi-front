@@ -9,6 +9,7 @@ import DeputadosDetalhes from "./pages/deputados/DeputadosDetalhes";
 import Evento from "./pages/evento/Evento";
 import EventosDetalhes from "./pages/evento/EventosDetalhes";
 import Graficos from "./pages/despesas/Graficos";
+import Search from "./pages/search/Search";
 
 function App() {
   const [blackHeader, setblackHeader] = useState(false);
@@ -43,6 +44,7 @@ function App() {
             />
             <Route path="/eventos/detalhe/:id" element={<EventosDetalhes />} />
             <Route path="/eventos/filtro/:query" element={<Evento />} />
+            <Route path="/busca/" element={<Search />} />
           </Routes>
         </div>
       </BrowserRouter>
