@@ -9,3 +9,9 @@
   padding-top: 120px;
   padding-left: 30px;
 }
+
+.linha{
+  width: 50%;
+  height: 1px;
+  background-color: #FFFFFF;
+}
