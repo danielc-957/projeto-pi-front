@@ -14,46 +14,71 @@ const Graficos = () => {
   const [data, setData] = useState([])
 
   const [mes, setMes] = useState({})
-
-  const [total, setTotal] = useState()
-
+  const [top,setTop] = useState(Number)
+ 
+  
   useEffect(()=>{
-    let temp = []; 
-    let x = 0
-    for (let index = 1; index < 13; index++) {
-      
-      apiDeputados.get('/deputados/' + params.id +'/despesas?mes='+index+'&ordem=ASC&ano=2019&itens=100').then(resultado=>{
-        setGrafico(resultado.data.dados)
-        console.log(resultado.data.dados)
-        console.log('entrei' + index)
-
-      async function somar() { 
-        
-        for (let index1 = 0; index1 < grafico.length; index1++) {
-          const gasto = await Number(grafico[index1].valorDocumento) 
-          console.log(gasto)
-          x = x + gasto
-          
-          
-        }
-        console.log(x)
-        return x
+    let to = 0
+    let temp = []
+    function somar(x) {
+     
+      for (let i = 0; i < x.length; i++) {
+          to = to + Number(x[i].valorDocumento);
+          console.log(to)
       }
+      console.log(to)
+      const total = to
+      setTop(total)
+      
+      console.log(total)
+      to=0
+      return total
+  }
+     function data(index) {
 
-      const total = somar()
-         temp[index] = {"name":`mes ${index}`,"media": total/(grafico.length),"total": total}
-         
-        console.log(temp[index])
-  
-  })
-
-  
+       apiDeputados.get("/deputados/" + params.id +"/despesas?&mes="+index+"&ano=2019&itens=150").then((pega) => {
+        const data = pega.data.dados
+      
+      setGrafico(data)
+      console.log(grafico.length);
+      console.log('entrei' + (index - 1) )
+       const total = somar(data)
+       
+       setMes ({"name":`mes ${index}`,"media": total/(data.length),"total": total})
+       temp[index-1]={"name":`mes ${index}`,"media": total/(data.length),"total/100": total/100}
+      });
+      
+       
+    }
+    
+    function fazerdata(params) {
+      
+      data(1)
+      data(2)
+      data(3)
+      data(4)
+      data(5)
+      data(6)
+      data(7)
+      data(8)
+      data(9)
+      data(10)
+      data(11)
+      data(12)
+      setData(temp)
       
     }
+    
+    fazerdata()
+    
+  
+  
+  
+      
+    
 
-    setData(temp)
 
-},[total])
+},[])
 
 console.log(data)
 
@@ -64,16 +89,15 @@ console.log(data)
     <div id='box'>
     <div id='info'>
     
-  <ComposedChart width={520} height={320} data={data}>
+  {data.length === 11 &&<ComposedChart width={520} height={320} data={data} className='text-white'>
   <XAxis dataKey="name" />
   <YAxis />
   <Tooltip />
-  <Legend />
+  <Legend className='text-white'/>
   <CartesianGrid stroke="#f5f5f5" />
-  <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-  <Bar dataKey="gastos" barSize={70} fill="#5645DA" />
+  <Bar dataKey="total/100" barSize={70} fill="#5645DA" />
   <Line type="monotone" dataKey="media" stroke="#fff" />
-  </ComposedChart>
+  </ComposedChart>}
     
     </div>
         
@@ -84,11 +108,11 @@ console.log(data)
         </div>
 
         <div className="col-sm">
-         01/04/2022 á 30/07/2022
+         01/04/2019 á 31/12/2019
         </div>
     </div>
     <div id="linha"></div>
-    <div id='text'>Balanceamento de despesas do deputado <br></br> por mês e trimestre</div>
+    <div id='text'>Balanceamento de despesas do deputado <br></br> </div>
     </div> 
     </div>
       
