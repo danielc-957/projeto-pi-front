@@ -48,6 +48,16 @@
     height: 125px;
 }
 
+.img-easter{
+    width: 50rem;
+    height: 50rem;
+}
+
+.organize-easter{
+    display: flex;
+    flex-direction: column;
+}
+
 .txt-detalhes{
     font-family: 'serif';
     font-size: 18px;

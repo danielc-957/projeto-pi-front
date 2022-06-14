@@ -41,14 +41,30 @@ const DeputadosDetalhes = () => {
   }
 
   if (!deputado || !deputado.ultimoStatus) {
-    return <h1>Carregando...</h1>;
+    if (params.id === "supermario") {
+      return (
+        <div>
+          <div className="cont">
+            <div className="organize-easter">
+              <img
+                src="https://www.tioorlando.com.br/blog/wp-content/uploads/2020/12/Orlando-Experts-Easter-eggs.jpg"
+                alt="..."
+                className=" mt-2"
+              ></img>{" "}
+              <h1 className="text-center"> Você achou o Easter Egg</h1>
+              <img
+                src="https://sm.ign.com/ign_br/gallery/s/super-mari/super-mario-odyssey-amiibo_9zgj.png"
+                alt="..."
+                className=" mt-2"
+              ></img>{" "}
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return <h1>Carregando...</h1>;
+    }
   }
-  if(params.id === "supermario"){
-    <div className="detalhes-dep" >
-       
-    </div>  
-
-  }else{
   return (
     <div className="detalhes-dep">
       <Container>
@@ -142,7 +158,7 @@ const DeputadosDetalhes = () => {
         </div>
       </Container>
     </div>
-  );}
+  );
   /* <div>
       <Link className="btn botao-despesas" to="/pages/despesas/Graficos/">Despesas</Link>
       <img src="https://www.camara.leg.br/internet/deputado/bandep/pagina_do_deputado/204416.jpg" alt="..." class="rounded-circle img-dep"></img>
