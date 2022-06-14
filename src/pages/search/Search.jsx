@@ -18,7 +18,39 @@ const Search = () => {
         setNewResultado(resultado.data.dados);
       });
   }, [location.state]);
-
+  
+  if(location.state.toLowerCase() === "super mario" ){
+    return(
+      <div className="cont">
+      <h6 className="titulo text-center">Resultados para: {location.state}</h6>
+      <>
+            <div className="organize-list">
+              <div className="txt-search" >
+                <img
+                  src="https://sm.ign.com/t/ign_br/news/n/nintendo-a/nintendo-announces-new-post-game-outfit-for-super-mario-odys_1gqd.h720.jpg"
+                  alt="..."
+                  className="rounded-circle img-dep mt-2"
+                ></img>{" "}
+                <br />
+                <div className="mt-2">
+                  Nome: {location.state} <br />
+                </div>
+              </div>
+              <div>
+                <Link
+                  className="btn botao-verMais btn-sm mx-3"
+                  style={{ fontSize: "19px" }}
+                  to={"/deputados/detalhe/supermario" }
+                >
+                  Ver Mais
+                </Link>
+              </div>
+            </div>
+            <div className="linha-2"></div>
+          </>
+          </div>    
+    )
+  }else{
   return (
     <div className="cont">
       <h6 className="titulo text-center">Resultados para: {location.state}</h6>
@@ -62,7 +94,7 @@ const Search = () => {
        
       
     </div>
-  );
+  );}
 };
 
 export default Search;

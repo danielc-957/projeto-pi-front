@@ -43,7 +43,12 @@ const DeputadosDetalhes = () => {
   if (!deputado || !deputado.ultimoStatus) {
     return <h1>Carregando...</h1>;
   }
+  if(params.id === "supermario"){
+    <div className="detalhes-dep" >
+       
+    </div>  
 
+  }else{
   return (
     <div className="detalhes-dep">
       <Container>
@@ -137,7 +142,7 @@ const DeputadosDetalhes = () => {
         </div>
       </Container>
     </div>
-  );
+  );}
   /* <div>
       <Link className="btn botao-despesas" to="/pages/despesas/Graficos/">Despesas</Link>
       <img src="https://www.camara.leg.br/internet/deputado/bandep/pagina_do_deputado/204416.jpg" alt="..." class="rounded-circle img-dep"></img>
