@@ -99,7 +99,7 @@ header.black{
 }
 
 /*barra de busca*/
-#divBusca{
+.form{
   background-color:rgba(255, 255, 255, 0.1);
   border:solid 1px;
   border-color:#727177 ;
@@ -118,6 +118,10 @@ header.black{
   border:none;
   height:32px;
   width:260px;
+}
+
+.buttonArea {
+margin-left: 1rem;
 }
 
 

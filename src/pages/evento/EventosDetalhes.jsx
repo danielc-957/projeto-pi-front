@@ -25,6 +25,7 @@ const EventosDetalhes = () => {
       let newData = [];
       for (let index = 0; index < data.length; index++) {
         const aux = {
+          id: data[index].id,
           nome: data[index].nome,
           foto: data[index].urlFoto,
           cardEvento: true,

@@ -59,6 +59,15 @@ const DeputadosDetalhes = () => {
                         Nome: {item.descricao} <br /> Local:{" "}
                         {item.localCamara.nome} <br /> Data e Horário:{" "}
                         {item.dataHoraInicio}
+                        <div>
+                          <Link
+                            className="btn botao-verMais btn-sm mx-3"
+                            style={{ fontSize: "19px" }}
+                            to={"/eventos/detalhe/" + item.id}
+                          >
+                            Ver Mais
+                          </Link>
+                        </div>
                       </div>
                     </>
                   ))}
@@ -98,7 +107,7 @@ const DeputadosDetalhes = () => {
                             <Link
                               className="btn botao-despesas btn-sm mx-3"
                               style={{ fontSize: "12px" }}
-                              to="/despesas/"
+                              to={"/deputados/graficos/" + params.id}
                             >
                               Despesas
                             </Link>
@@ -109,19 +118,7 @@ const DeputadosDetalhes = () => {
                   </tbody>
                 </table>
               </div>
-              <div>
-                <Link
-                  className="btn botao-despesas"
-                  to={"/deputados/graficos/" + params.id}
-                >
-                  Despesas
-                </Link>
-                <img
-                  src="https://www.camara.leg.br/internet/deputado/bandep/pagina_do_deputado/204416.jpg"
-                  alt="..."
-                  class="rounded-circle img-dep"
-                ></img>
-              </div>
+
               <div className="linha-2 mb-2"></div>
               <div className="titulo-nome-2">Nome: {deputado.nomeCivil}</div>
               <div className="txt-detalhes">Idade: {deputado.idade}</div>

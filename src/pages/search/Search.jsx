@@ -9,6 +9,7 @@ import SearchNotFound from "../../images/search-not-found.png";
 const Search = () => {
   const location = useLocation();
   const [newResultado, setNewResultado] = useState([]);
+  const [naoAchei, setNaoAchei] = useState(Boolean);
 
   useEffect(() => {
     apiDeputados
@@ -21,7 +22,7 @@ const Search = () => {
   return (
     <div className="cont">
       <h6 className="titulo text-center">Resultados para: {location.state}</h6>
-      {newResultado.length !== 0 ? (
+      {newResultado.length !== 0  && 
         newResultado.map((item) => (
           <>
             <div className="organize-list">
@@ -52,11 +53,14 @@ const Search = () => {
             <div className="linha-2"></div>
           </>
         ))
-      ) : (
+                } 
+        {newResultado.length === 0 &&  
         <div className="notFoundSearch">
           <img src={SearchNotFound} alt="..." className="img-not-found"></img>
         </div>
-      )}
+        } 
+       
+      
     </div>
   );
 };

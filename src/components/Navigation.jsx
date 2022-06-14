@@ -67,21 +67,21 @@ const Navigation = ({ black }) => {
                   </Link>
                 </NavDropdown>
               </div>
-
+          
               <div className="search-division d-flex justify-content-end">
-                <Form.Group
-                  className="mb-3"
+                <form
+                  className="mb-3 "
                   controlId="busca"
-                  id="divBusca"
                   placeholder="Buscar..."
                 >
-                  <Form.Control type="text" {...register("busca")} />
-                </Form.Group>
-
-                <a>
+                  <input type="text" className="form" {...register("busca")} />
+                </form>
+                <div className="buttonArea">
+                <Button type="submit" className="nav-link ml-3" variant="dark" onClick={handleSubmit(receiveData)} >
                   <RiSearchEyeLine />
-                  <input type="submit" onClick={handleSubmit(receiveData)} />
-                </a>
+                    Search
+                </Button>
+                </div>
               </div>
             </div>
           </Nav>
