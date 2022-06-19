@@ -45,7 +45,7 @@ const Graficos = () => {
        const total = somar(data)
        
        setMes ({"name":`mes ${index}`,"media": total/(data.length),"total": total})
-       temp[index-1]={"name":`mes ${index}`,"media": total/(data.length),"total/100": total/100}
+       temp[index-1]={"name":`mes ${index}`,"media": total/(data.length),"total/100": total/10}
       });
       
        
@@ -89,11 +89,11 @@ console.log(data)
     <div id='box'>
     <div id='info'>
     
-  {data.length === 11 &&<ComposedChart width={520} height={320} data={data} className='text-white'>
+  {data.length === 11 &&<ComposedChart width={520} height={320} data={data} >
   <XAxis dataKey="name" />
   <YAxis />
   <Tooltip />
-  <Legend className='text-white'/>
+  <Legend />
   <CartesianGrid stroke="#f5f5f5" />
   <Bar dataKey="total/100" barSize={70} fill="#5645DA" />
   <Line type="monotone" dataKey="media" stroke="#fff" />

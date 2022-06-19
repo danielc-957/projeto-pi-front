@@ -51,7 +51,7 @@ const DeputadosDetalhes = () => {
                 alt="..."
                 className=" mt-2"
               ></img>{" "}
-              <h1 className="text-center"> Você achou o Easter Egg</h1>
+              <h1 className="text-center"> Você achou o Easter Egg, Era para ter um jogo aqui mas os programadores não tiveram tempo de programar essa feature</h1>
               <img
                 src="https://sm.ign.com/ign_br/gallery/s/super-mari/super-mario-odyssey-amiibo_9zgj.png"
                 alt="..."
